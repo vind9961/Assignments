@@ -1,0 +1,31 @@
+h1{
+	color: red;
+}
+body{
+	margin: 20px;
+}
+#category{
+	font-size: 18px
+}
+div.item{
+	color
+	font-size: 15px;
+	border:2px solid #ff1aff;
+	margin:20px;
+	width:300px;
+	padding: 10px;
+	background-color: #ff6699;
+}
+span.d{
+	font-weight: bold;
+	color: white;
+}
+span.name{
+	font-size: 20px;
+	font-weight: bold;
+	color:	white;
+}
+span.description{
+	font-style: italic;
+	color:	white;
+}
