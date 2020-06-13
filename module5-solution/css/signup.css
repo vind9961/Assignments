@@ -1,0 +1,22 @@
+#name{
+	color:black;
+	margin: 2px;
+	padding:0px;
+}
+
+#check{
+	color: white;
+	margin: 10px;
+}
+#submit{
+	background-color: ;
+	margin:5px;
+}
+#signup{
+	color: #fff;
+	font-weight: bold;
+	font-family: 'Oxygen', sans-serif;
+}
+#info{
+	margin: 10px;
+}

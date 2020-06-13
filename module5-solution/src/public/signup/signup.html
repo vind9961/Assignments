@@ -1,0 +1,79 @@
+
+<div class='container'>
+<fieldset>
+      <legend id ='signup' class='text-center'>Sign Up</legend>
+      <form name='regForm' novalidate>
+
+       <input id='name' type="text" name="name" placeholder="First Name"
+          ng-model="reg.user.firstName"
+          required
+          ng-maxlength="10">
+          <span
+            ng-if="regForm.name.$error.required && regForm.username.$touched">
+            Plese enter your first name
+          </span>
+          <span ng-if="regForm.name.$error.maxlength && regForm.name.$touched">
+            First name must not be longer than 10 characters
+          </span>
+
+           <br>
+
+
+       <input id='name' type="text" name="name2" placeholder="Last Name"
+          ng-model="reg.user.lastName"
+          required
+          ng-maxlength="10">
+          <span
+            ng-if="regForm.name2.$error.required && regForm.username.$touched">
+            Plese enter your last name
+          </span>
+          <span ng-if="regForm.name2.$error.maxlength && regForm.name2.$touched">
+            Last name must not be longer than 10 characters
+          </span>  
+
+          <br>
+
+       <input id='name' type="email" name="email" placeholder="Email"
+          ng-model="reg.user.email"
+          required>
+          <span ng-if="regForm.email.$invalid && regForm.email.$touched">
+            Must be a valid email address: handle@domain format
+          </span>
+          <br>
+
+       <input id='name' type="text" name="phone" placeholder="Phone ###-###-####"
+       required
+          ng-model="reg.user.phone"
+          pattern="(\d{3})-(\d{3})-(\d{4})">
+          <span ng-if="regForm.phone.$invalid && regForm.phone.$touched">
+            Phone must be in the format ###-###-####.
+          </span>
+          <br>
+
+       <input id='name' type="text" name="menu" placeholder="Menu Number"
+          ng-model="reg.user.menuNumber"
+          required
+          ng-maxlength="10"
+          ng-blur ="reg.checkMenu()">
+          <span
+            ng-if="regForm.menu.$error.required && regForm.menu.$touched">
+            Plese enter your favourite menu number
+          </span> 
+          <span class="check" ng-if="reg.check" ng-hide='reg.show ||(regForm.menu.$error.required && regForm.menu.$touched)'>
+            No such menu number exists.
+          </span> <br>
+
+
+
+        <button id = 'submit' class="btn btn-success"
+          ng-disabled="regForm.$invalid || reg.check"
+          ng-click="reg.submit()">Submit</button>
+
+      </form>
+    </fieldset>
+</div>
+
+     <div id="info" ng-if="reg.completed" ng-hide="reg.show">
+     	Your information has been saved.
+    </div>
+

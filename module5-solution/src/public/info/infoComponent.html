@@ -1,0 +1,16 @@
+
+<div class="menu-item-tile col-md-6">
+  <div class="row">
+    <div class="col-sm-5">
+      <div class="menu-item-photo">
+        <div>{{$ctrl.menu.short_name}}</div>
+        <img class="img-responsive" width="250" height="150" ng-src="https://vind9961.herokuapp.com/images/{{$ctrl.menu.short_name}}.jpg" alt="{{$ctrl.menu.name}}">
+      </div>
+    </div>
+    <div class="menu-item-description col-sm-7">
+      <h3 class="menu-item-title">{{$ctrl.menu.name}}</h3>
+      <p class="menu-item-details">{{$ctrl.menu.description}}</p>
+    </div>
+  </div>
+  <hr class="visible-xs">
+</div>

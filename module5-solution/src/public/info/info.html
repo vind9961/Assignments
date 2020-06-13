@@ -1,0 +1,15 @@
+<div ng-hide='infoCtrl.signUp'>
+	Not Signed Up Yet. <a ui-sref='public.signup'> Sign up Now! </a>
+</div>
+
+<div ng-if='infoCtrl.signUp' class='container'>
+	Name : {{infoCtrl.name}} <br>
+	Phone Number : {{infoCtrl.phone}} <br>
+	E-mail : {{infoCtrl.email}} <br>
+	Favorite item : <span ng-hide='infoCtrl.findItem'>
+	No such menu number exists. </span> <br> <br> <menu-items menu="infoCtrl.menuItem" ng-if='infoCtrl.findItem'>
+                 </menu-items>
+</div>
+
+
+
